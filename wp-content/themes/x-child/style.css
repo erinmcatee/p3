@@ -1,0 +1,188 @@
+/*
+
+Theme Name: X &ndash; Child Theme
+Theme URI: http://theme.co/x/
+Author: Themeco
+Author URI: http://theme.co/
+Description: Make all of your modifications to X in this child theme.
+Version: 1.0.0
+Template: x
+
+*/
+
+/* global Styles */
+body {
+	background-image: none !important;
+}
+
+h1, h2 {
+	text-transform: uppercase;
+}
+
+/* Helpers */
+.white,
+.white h1,
+.white h2,
+.white h3, 
+.white h4,
+.white h5,
+.white h6,
+.white p,
+.white span {
+	color: #fff !important;
+}
+
+.center {
+	text-align: center;
+}
+
+.font-light,
+.font-light h1,
+.font-light h2,
+.font-light h3,
+.font-light h4,
+.font-light h5,
+.font-light h6,
+.font-light p,
+.font-light span
+ {
+	font-weight: 300;
+}
+
+/* Header Styles */
+.Icon {
+    height: 8rem;
+    width: 5rem;
+    margin: .5rem 0;
+}
+
+.x-brand {
+	margin-top: 0 !important;
+	width: auto;
+}
+
+.x-navbar {
+}
+
+.cta {
+	float: right;
+    line-height: 90px;	
+}
+
+/* Body Styles */
+.divider {
+	margin:15px 0;
+}
+
+/* Footer Styles */
+.x-colophon {
+	background: #282828;
+	color: #fff;
+	border-top:none;
+	box-shadow: none;
+}
+
+.x-colophon h4 {
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 0 1em;
+}
+
+.x-colophon h4.h-widget::before{
+	display: none;
+}
+
+.x-colophon+.x-colophon {
+	border-top:none;
+	box-shadow: none;
+}
+
+.x-colophon.bottom .x-social-global a {
+	margin: 0 2.25%;
+    font-size: 6rem;
+}
+
+.x-colophon .widget {
+	text-shadow: none;
+}
+.x-colophon .x-section {
+	padding:0;
+}
+
+.x-colophon.bottom .x-colophon-content {
+	margin: 10px 10% 20px;
+	border-top: 1px solid;
+	padding:2em 0 0;
+}
+
+.x-social-global {
+	margin: 2em 0 0;
+}
+
+.x-social-global a {
+	font-size: 4rem;
+	color: rgba(255,255,255,1);
+	margin: 0 1.5rem;
+}
+
+.x-social-global a:hover,
+.footer-middle a:hover {
+	color: rgba(255,255,255,0.8);	
+}
+
+.footer-middle {
+	text-align: center;
+}
+
+.footer-middle i {
+	margin-right: .5em;
+}
+
+.footer-middle a,
+.footer-middle a:link {
+	color: #fff;
+}
+
+
+
+/*Home Rotator */
+.home-feature-text,
+.home-feature-text h1,
+.home-feature-text h2,
+.home-feature-text h3,
+.home-feature-text h4,
+.home-feature-text h5,
+.home-feature-text h6,
+.home-feature-text span {
+	line-height: 1.2;
+	margin: 0;
+}
+
+.home-feature-text p {
+	margin:1em 0;
+	color: #fff;
+	font-size: 1.4em;
+}
+
+
+/*Responsive */
+@media (max-width: 767px) {
+	.Icon {
+		height: 8rem;
+		width: 21rem;
+	}
+	.x-brand,
+	.cta {
+		float: none;
+		text-align: center;
+	}
+	.x-subscribe-form {
+		max-width: 100% !important;
+	}
+}
+
+@media (max-width: 979px) {
+	.x-colophon .footer-middle {
+		text-align: left !important;
+	}
+}
