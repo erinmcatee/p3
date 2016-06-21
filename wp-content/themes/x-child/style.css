@@ -173,22 +173,40 @@ h1, h2 {
 
 /*Responsive */
 @media (max-width: 767px) {
-	.Icon {
-		height: 8rem;
-		width: 21rem;
-	}
-	.x-brand,
-	.cta {
-		float: none;
-		text-align: center;
-	}
 	.x-subscribe-form {
 		max-width: 100% !important;
 	}
+	
 }
 
 @media (max-width: 979px) {
+	.Icon {
+		height: 9rem;
+		width: 5rem;
+	}
+
 	.x-colophon .footer-middle {
 		text-align: left !important;
 	}
+	.x-container > .cta {
+		display: none;
+	}
+
+	.x-brand {
+		float: left;
+		text-align: center;
+	}
+	
+	.cta {
+		float: none;
+		text-align: center;
+		line-height: 1;
+		margin-top: 25px;
+	}
+	
+	.cta > a.x-btn {
+		width: 100%;
+	}
+
+
 }
