@@ -142,20 +142,29 @@ h1, h2 {
 
 
 
-/*Home Rotator */
+/*Home Rotator & All Feature Text */
 .home-feature-text,
+.feature-text,
 .home-feature-text h1,
+.feature-text h1,
 .home-feature-text h2,
+.feature-text h2,
 .home-feature-text h3,
+.feature-text h3,
 .home-feature-text h4,
+.feature-text h4,
 .home-feature-text h5,
+.feature-text h5,
 .home-feature-text h6,
-.home-feature-text span {
+.feature-text h6,
+.home-feature-text span,
+.feature-text span {
 	line-height: 1.2;
 	margin: 0;
 }
 
-.home-feature-text p {
+.home-feature-text p,
+.feature-text p {
 	margin:1em 0;
 	color: #fff;
 	font-size: 1.4em;
