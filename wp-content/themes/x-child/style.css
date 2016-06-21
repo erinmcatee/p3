@@ -170,6 +170,16 @@ h1, h2 {
 	font-size: 1.4em;
 }
 
+/*Flex Slider */
+
+.x-flexslider-shortcode-container {
+	margin-bottom: 0 !important;
+}
+
+.alignnone {
+	margin: 0 !important;
+}
+
 
 /*Responsive */
 @media (max-width: 767px) {
