@@ -49,6 +49,10 @@ h1, h2 {
 	font-weight: 300;
 }
 
+.bold {
+	font-weight: 700;
+}
+
 /* Header Styles */
 .Icon {
     height: 10rem;
