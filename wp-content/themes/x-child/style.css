@@ -208,7 +208,7 @@ h1, h2 {
 /* Page Specific */
 /* Contact Us */
 
-ul.contact-icons {
+.contact-icons ul {
 	list-style: none;
 	margin: 0;
 }
