@@ -196,6 +196,15 @@ h1, h2 {
 	margin-top: 0 !important;
 }
 
+/*Contact Form 7 */
+.wpcf7 span[role=alert] {
+	color: red;
+}
+
+.wpcf7 .wpcf7-not-valid {
+	border-color: rgba(255,0,0,1);
+}
+
 
 
 /*Responsive */
