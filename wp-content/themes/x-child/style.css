@@ -215,10 +215,13 @@ h1, h2 {
 
 .contact-icons li {
 	font-size: 7rem;
-	margin-right: 1.4rem;
 	float:left;
+	width: 33%;
 }
 
+.contact-icons li a {
+	float: left;
+}
 
 /*Responsive */
 @media (max-width: 767px) {
