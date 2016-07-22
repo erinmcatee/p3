@@ -43,3 +43,78 @@ echo '<meta name="msapplication-TileImage" content="'.get_bloginfo('wpurl').'/ms
 echo '<meta name="theme-color" content="#ffffff"/>';
 }
 add_action('wp_head', 'favicons');
+
+
+/* Custom options page in admin */
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page(array(
+		'page_title' 	=> 'P3 Settings',
+		'menu_title'	=> 'P3 Settings',
+		'menu_slug' 	=> 'p3-general-settings',
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));	
+}
+
+// Disable support for comments and trackbacks in post types
+function df_disable_comments_post_types_support() {
+	$post_types = get_post_types();
+	foreach ($post_types as $post_type) {
+		if(post_type_supports($post_type, 'comments')) {
+			remove_post_type_support($post_type, 'comments');
+			remove_post_type_support($post_type, 'trackbacks');
+		}
+	}
+}
+add_action('admin_init', 'df_disable_comments_post_types_support');
+
+// Close comments on the front-end
+function df_disable_comments_status() {
+	return false;
+}
+add_filter('comments_open', 'df_disable_comments_status', 20, 2);
+add_filter('pings_open', 'df_disable_comments_status', 20, 2);
+
+// Hide existing comments
+
+
+/*Override Entry Meta styles */
+function x_integrity_entry_meta() {
+
+	//
+	// Date.
+	//
+	
+	$date = sprintf( '<span><time class="entry-date" datetime="%1$s"><i class="x-icon-calendar" data-x-icon="&#xf073;"></i> %2$s</time></span>',
+	  esc_attr( get_the_date( 'c' ) ),
+	  esc_html( get_the_date() )
+	);
+	
+	
+	//
+	// Output.
+	//
+	
+	if ( x_does_not_need_entry_meta() ) {
+	  return;
+	} else {
+	  printf( '<p class="p-meta">%1$s%2$s%3$s%4$s</p>',
+	    $author,
+	    $date,
+	    $categories_list,
+	    $comments
+	  );
+	}
+}
+
+/**
+ * Filter the except length to 20 characters.
+ *
+ * @param int $length Excerpt length.
+ * @return int (Maybe) modified excerpt length.
+ */
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
