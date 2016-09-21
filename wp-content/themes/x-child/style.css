@@ -196,6 +196,16 @@ h1, h2 {
 	margin-top: 0 !important;
 }
 
+.btn-lightbox {
+	padding: 0.643em 1.429em 0.786em;
+    font-size: 28px;
+    border-color: #fff;
+}
+
+.btn-lightbox:hover {
+    border-color: #fff;
+}
+
 /*Contact Form 7 */
 .wpcf7 span[role=alert] {
 	color: red;
