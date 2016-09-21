@@ -197,8 +197,8 @@ h1, h2 {
 }
 
 .rev_slider_wrapper .x-btn.btn-lightbox {
-	padding: 0.643em 1.429em 0.786em;
-    font-size: 28px;
+	padding: 0.643em 1.429em 0.786em !important;
+    font-size: 28px !important;
     border-color: #fff;
 }
 
