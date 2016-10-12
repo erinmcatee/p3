@@ -118,3 +118,29 @@ function wpdocs_custom_excerpt_length( $length ) {
     return 20;
 }
 add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+
+/**
+ * Return vertical listing of social icons.
+ */
+
+if ( ! function_exists( 'x_social_vertical' ) ) :
+  function x_social_vertical() {
+
+    $facebook    = x_get_option( 'x_social_facebook' );
+    $twitter     = x_get_option( 'x_social_twitter' );
+    $instagram   = x_get_option( 'x_social_instagram' );
+
+    $output = '<div class="x-social-vertical">';
+
+      if ( $facebook )    : $output .= '<div class="x-column x-1-5"><a href="' . $facebook    . '" class="facebook" title="Facebook" target="_blank"><i class="x-icon-facebook-square" data-x-icon="&#xf082;" aria-hidden="true"></i></a></div><div class="x-column x-4-5 last x_social_vertical_handle"><a href="' . $facebook    . '" class="x_social_vertical_handle">@p3peacepowerpurpose</a></div><hr class="x-clear">'; endif;
+      if ( $twitter )     : $output .= '<div class="x-column x-1-5"><a href="' . $twitter     . '" class="twitter" title="Twitter" target="_blank"><i class="x-icon-twitter-square" data-x-icon="&#xf081;" aria-hidden="true"></i></a></div><div class="x-column x-4-5 last x_social_vertical_handle"><a href="' . $twitter    . '" class="x_social_vertical_handle">@p3ministry</a></div><hr class="x-clear">'; endif;
+      if ( $instagram )   : $output .= '<div class="x-column x-1-5"><a href="' . $instagram   . '" class="instagram" title="Instagram" target="_blank"><i class="x-icon-instagram" data-x-icon="&#xf16d;" aria-hidden="true"></i></a></div><div class="x-column x-4-5 last x_social_vertical_handle"><a href="' . $instagram    . '" class="x_social_vertical_handle">@p3peacepowerpurpose</a></div>'; endif;
+
+    $output .= '</div>';
+
+    echo $output;
+
+  }
+endif;
+

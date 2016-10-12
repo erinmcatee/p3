@@ -26,7 +26,7 @@ $n = x_footer_widget_areas_count();
           dynamic_sidebar( 'footer-' . $i );
           
           if ($i == 2 && x_get_option( 'x_footer_social_display' ) == '1') :
-          	x_social_global();
+          	x_social_vertical();
 		  endif;
           
         echo '</div>';
