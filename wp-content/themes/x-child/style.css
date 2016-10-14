@@ -126,8 +126,11 @@ h1, h2 {
 	margin: 0 1.5rem;
 }
 
-.x-social-vertical a {
+.x-social-vertical a i {
 	font-size: 4rem;
+}
+
+footer .x-social-vertical a i {
 	color: rgba(255,255,255,1);
 }
 
@@ -144,9 +147,9 @@ h1, h2 {
 	line-height: 2;
 }
 
-.x-social-global a:hover,
-.footer-middle a:hover,
-.x-social-vertical a:hover {
+footer .x-social-global a:hover,
+footer .footer-middle a:hover,
+footer .x-social-vertical a:hover {
 	color: rgba(255,255,255,0.8);	
 }
 
