@@ -45,7 +45,21 @@ echo '<meta name="theme-color" content="#ffffff"/>';
 add_action('wp_head', 'favicons');
 
 
+//JPlayer Script
+// =============================================================================
+function add_scripts(){
+	wp_enqueue_script('jplayer', get_stylesheet_directory_uri() .'/js/jquery.jplayer.min.js', array('jquery'), null, true);
+	wp_enqueue_script('jplayer.playlist', get_stylesheet_directory_uri() .'/js/jplayer.playlist.min.js', array('jquery'), null, true);
+}
+add_action( 'wp_enqueue_scripts', 'add_scripts' );
+
+function load_p3player(){
+	wp_enqueue_script('p3player', get_stylesheet_directory_uri() .'/js/p3player.js', array('jquery'), null, true);	
+}
+add_action( 'wp_footer', 'load_p3player' );
+
 /* Custom options page in admin */
+// =============================================================================
 if( function_exists('acf_add_options_page') ) {
 	
 	acf_add_options_page(array(
