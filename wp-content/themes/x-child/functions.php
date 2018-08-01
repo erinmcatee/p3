@@ -136,7 +136,7 @@ add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
 
 /**
  * Return vertical listing of social icons.
- */
+
 
 if ( ! function_exists( 'x_social_vertical' ) ) :
   function x_social_vertical() {
@@ -157,7 +157,8 @@ if ( ! function_exists( 'x_social_vertical' ) ) :
 
   }
 endif;
-
+ */
+ 
 
 /**
  * Facebook pixel tracking code

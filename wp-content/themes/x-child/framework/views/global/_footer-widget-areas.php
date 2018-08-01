@@ -15,7 +15,7 @@ $n = x_footer_widget_areas_count();
   <footer class="x-colophon top" role="contentinfo">
     <div class="x-container max width">
 
-      <?php
+      <?php 
 
       $i = 0; while ( $i < $n ) : $i++;
 
@@ -25,10 +25,11 @@ $n = x_footer_widget_areas_count();
         echo '<div class="x-column x-md x-1-' . $n . $footer_middle . $last . '">';
           dynamic_sidebar( 'footer-' . $i );
           
+          /*
           if ($i == 2 && x_get_option( 'x_footer_social_display' ) == '1') :
           	x_social_vertical();
 		  endif;
-          
+          */
         echo '</div>';
 
       endwhile;
