@@ -387,16 +387,16 @@ footer .x-social-vertical a:hover {
 }
 
 .jp-col1 {
-	width:15%;
+	width:33%;
 	padding:0 2%;
 }
 
 .jp-col2 {
-	width:35%;
+	width:37%;
 	padding:0 2%;	
 }
 .jp-col3 {
-	width:35%;
+	width:28%;
 	padding:0 2%;	
 }
 
@@ -481,7 +481,7 @@ footer .x-social-vertical a:hover {
   overflow: hidden; }
 
 .jp-audio .jp-controls {
-  padding: 0 0 0 20px; 
+  padding: 0 0 0 10px; 
   float: left;
   position: relative; }
 
@@ -533,7 +533,7 @@ footer .x-social-vertical a:hover {
 
 .jp-stop {
   background: url("images/jplayer.blue.monday.jpg") 0 -83px no-repeat;
-  margin-left: 10px; }
+  margin-left: 0; }
 
 .jp-stop:focus {
   background: url("images/jplayer.blue.monday.jpg") -29px -83px no-repeat; }
@@ -598,10 +598,10 @@ footer .x-social-vertical a:hover {
 
 .jp-volume-controls {
 	position: relative;
-    top: 5px;
     width: 100%;
     float: left;
-    margin: 0 0 0 2%; }
+    margin: 5px 0 0 0; 
+    height:1em; }
 
 .jp-audio-stream .jp-volume-controls {
   left: 70px; }
@@ -839,8 +839,7 @@ span.jp-artist {
 	width: 100%;
     margin: 0;
     position: relative;
-    top: 5px;
-    margin: 0 0 0 4%;
+    margin: 0 0 0 18px;
     float: left; }
 
 .jp-video .jp-toggles {
