@@ -359,7 +359,7 @@ footer .x-social-vertical a:hover {
   line-height: 1.6;
   color: #666;
   border: 1px solid #666;
-  background-color: #eee; }
+  background-color: white; }
 
 .jp-audio {
   width: 100%; }
@@ -380,6 +380,45 @@ footer .x-social-vertical a:hover {
   /* Rules for IE7 (full-screen) - Otherwise the relative container causes other page items that are not position:static (default) to appear over the video/gui. */
   position: static !important;
   position: relative; }
+  
+.jp-col1, .jp-col2, .jp-col3 {
+	display: block !important;
+	float: left !important;
+}
+
+.jp-col1 {
+	width:15%;
+	padding:0 2%;
+}
+
+.jp-col2 {
+	width:35%;
+	padding:0 2%;	
+}
+.jp-col3 {
+	width:35%;
+	padding:0 2%;	
+}
+
+@media (max-width: 979px) {
+	.jp-audio .jp-controls {
+		padding:0 !important;
+	}
+	.jp-stop {
+		margin-left: 0 !important;
+	}
+	.jp-col1 {
+		width:38%;
+	}
+	.jp-col2 {
+		width:35%;
+	}
+	.jp-col3 {
+		width:20%;
+	}
+	
+}
+
 
 /* The z-index rule is defined in this manner to enable Popcorn plugins that add overlays to video area. EG. Subtitles. */
 .jp-video-full div div {
@@ -417,10 +456,11 @@ footer .x-social-vertical a:hover {
   width: 100%; }
 
 .jp-audio .jp-interface {
-  height: 80px; }
+  height: 60px; 
+  padding:10px 0;}
 
 .jp-audio-stream .jp-interface {
-  height: 80px; }
+  height: 60px; }
 
 .jp-video .jp-interface {
   border-top: 1px solid #009be3; }
@@ -441,8 +481,9 @@ footer .x-social-vertical a:hover {
   overflow: hidden; }
 
 .jp-audio .jp-controls {
-  width: 380px;
-  padding: 20px 20px 0 20px; }
+  padding: 0 0 0 20px; 
+  float: left;
+  position: relative; }
 
 .jp-audio-stream .jp-controls {
   position: absolute;
@@ -516,17 +557,18 @@ footer .x-social-vertical a:hover {
   background-color: #ddd; }
 
 .jp-audio .jp-progress {
-  position: absolute;
-  top: 32px;
-  height: 15px; }
+    position: relative;
+    top: 5px;
+    height: 15px; }
 
 .jp-audio .jp-type-single .jp-progress {
   left: 110px;
   width: 186px; }
 
 .jp-audio .jp-type-playlist .jp-progress {
-  left: 166px;
-  width: 130px; }
+  width: 100%; 
+  float:left;
+  }
 
 .jp-video .jp-progress {
   top: 0px;
@@ -552,13 +594,14 @@ footer .x-social-vertical a:hover {
 /* @end */
 /* @group volume controls */
 .jp-state-no-volume .jp-volume-controls {
-  display: none; }
+  display: none;}
 
 .jp-volume-controls {
-  position: absolute;
-  top: 32px;
-  left: 308px;
-  width: 200px; }
+	position: relative;
+    top: 5px;
+    width: 100%;
+    float: left;
+    margin: 0 0 0 2%; }
 
 .jp-audio-stream .jp-volume-controls {
   left: 70px; }
@@ -619,20 +662,21 @@ footer .x-social-vertical a:hover {
 /* @end */
 /* @group current time and duration */
 .jp-audio .jp-time-holder {
-  position: absolute;
-  top: 50px; }
+    position: relative;
+    top: 8px; }
 
 .jp-audio .jp-type-single .jp-time-holder {
   left: 110px;
   width: 186px; }
 
 .jp-audio .jp-type-playlist .jp-time-holder {
-  left: 166px;
-  width: 130px; }
+	width: 100%;
+    float: left;
+    clear: right; }
 
 .jp-current-time,
 .jp-duration {
-  width: 60px;
+  width: 46px;
   font-size: .64em;
   font-style: oblique; }
 
@@ -784,19 +828,20 @@ span.jp-artist {
 /* @group TOGGLES */
 /* The audio toggles are nested inside jp-time-holder */
 .jp-toggles {
-  padding: 0;
-  margin: 0 auto;
-  overflow: hidden; }
+    padding: 0;
+    margin: 0 auto;
+    overflow: hidden; }
 
 .jp-audio .jp-type-single .jp-toggles {
   width: 25px; }
 
 .jp-audio .jp-type-playlist .jp-toggles {
-  width: 55px;
-  margin: 0;
-  position: absolute;
-  left: 325px;
-  top: 50px; }
+	width: 100%;
+    margin: 0;
+    position: relative;
+    top: 5px;
+    margin: 0 0 0 4%;
+    float: left; }
 
 .jp-video .jp-toggles {
   position: absolute;
